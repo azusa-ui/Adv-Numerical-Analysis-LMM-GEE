@@ -5,8 +5,7 @@
 ![Quarto ≥ 1.4](https://img.shields.io/badge/Quarto-≥%201.4-orange.svg)
 ![IDE: Positron](https://img.shields.io/badge/IDE-Positron-blueviolet.svg)
 ![Workflow: REAAAPP](https://img.shields.io/badge/Workflow-REAAAPP-teal.svg)
-![GitHub stars](https://img.shields.io/github/stars/DrKangMunir/advance-numerical-analysis?style=social)
-![GitHub forks](https://img.shields.io/github/forks/DrKangMunir/advance-numerical-analysis?style=social)
+
 
 Reproducible **Linear Mixed Effects Model (LMM)** and **Generalised Estimating Equations (GEE)** analysis of longitudinal HbA1c trajectories in Type 2 Diabetes Mellitus, following the **REAAAPP** workflow (GET503 Advanced Numerical Data Analysis, DrPH, Universiti Sains Malaysia).
 
