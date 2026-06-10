@@ -1,0 +1,230 @@
+/* ============================================================
+   t2dm_gee_theme.css
+   Colourblind-Friendly Professional Theme for Quarto HTML
+   ──────────────────────────────────────────────────────────
+   Palette: Okabe & Ito (2008) — universal colourblind-safe
+   #E69F00  amber/orange
+   #56B4E9  sky blue
+   #009E73  bluish green
+   #0072B2  cobalt blue
+   #D55E00  vermillion
+   #CC79A7  reddish purple
+   #F0E442  yellow
+   #000000  black
+   ============================================================ */
+
+/* ── Base ── */
+body {
+  font-family: "Source Sans Pro", "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1a1c2e;
+  background: #f5f7fa;
+}
+
+/* ── Title block ── */
+#title-block-header {
+  background: linear-gradient(135deg, #0b2d5e 0%, #0072B2 60%, #009E73 100%);
+  color: #fff;
+  padding: 2.6rem 3rem 2.2rem;
+  margin-bottom: 0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 18px rgba(0,114,178,0.18);
+}
+.title   { font-size: 1.75rem !important; font-weight: 700 !important; color: #fff !important; }
+.subtitle { font-size: 0.92rem !important; color: rgba(255,255,255,0.82) !important; margin-top: 0.3rem !important; }
+.author, .date { color: rgba(255,255,255,0.70) !important; font-size: 0.875rem !important; }
+
+/* ── TOC ── */
+#TOC {
+  background: #fff;
+  border: 1px solid #d0dbe8;
+  border-left: 4px solid #0072B2;
+  border-radius: 8px;
+  padding: 1.1rem 0.9rem;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0,114,178,0.07);
+}
+#TOC .toc-title {
+  font-weight: 700;
+  font-size: 0.77rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #0072B2;
+  border-bottom: 2px solid #d6eaf8;
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.7rem;
+}
+#TOC a { color: #1a1c2e; text-decoration: none; transition: color 0.18s, padding-left 0.18s; display: block; padding: 2px 4px; border-radius: 4px; }
+#TOC a:hover { color: #0072B2; background: #eaf4fb; padding-left: 8px; }
+#TOC .active > a { color: #0072B2 !important; font-weight: 600; border-left: 3px solid #009E73; padding-left: 7px; background: #eaf4fb; }
+#TOC > ul > li > a { font-weight: 600; font-size: 0.86rem; }
+#TOC > ul > li > ul { padding-left: 0.9rem; border-left: 1px dashed #d0dbe8; margin-left: 4px; }
+#TOC > ul > li > ul > li > a { font-size: 0.83rem; color: #4a5568; }
+
+/* ── Headings ── */
+h1 { font-size: 1.5rem; color: #0b2d5e; border-bottom: 3px solid #d6eaf8; padding-bottom: 0.45rem; margin-top: 2.2rem; position: relative; }
+h1::after { content: ""; position: absolute; bottom: -3px; left: 0; width: 50px; height: 3px; background: #009E73; border-radius: 2px; }
+h2 { font-size: 1.15rem; color: #0072B2; border-left: 4px solid #009E73; padding-left: 0.7rem; margin-top: 1.8rem; }
+h3 { font-size: 1rem; color: #1a1c2e; border-left: 3px solid #d6eaf8; padding-left: 0.55rem; }
+h4 { font-size: 0.9rem; color: #009E73; text-transform: uppercase; letter-spacing: 0.5px; }
+.header-section-number { color: #009E73; margin-right: 0.35rem; }
+
+/* ── Main content ── */
+#quarto-content main {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 2.2rem 2.8rem;
+}
+
+/* ══════════════════════════════════════════════
+   ASSIGNMENT OVERVIEW TABLE — coloured rows
+══════════════════════════════════════════════ */
+/* Target the first table in the document (overview table) */
+#quarto-content main > table:first-of-type,
+.assignment-overview table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,114,178,0.13);
+  border: none;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.9rem;
+}
+#quarto-content main > table:first-of-type thead tr,
+.assignment-overview table thead tr {
+  background: linear-gradient(90deg, #0b2d5e 0%, #0072B2 100%);
+  color: #fff;
+}
+#quarto-content main > table:first-of-type thead th,
+.assignment-overview table thead th {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  border: none;
+}
+
+/* Coloured row highlights using Okabe & Ito palette */
+#quarto-content main > table:first-of-type tbody tr:nth-child(1) { background: #fff8e6; border-left: 4px solid #E69F00; }
+#quarto-content main > table:first-of-type tbody tr:nth-child(2) { background: #e8f4fb; border-left: 4px solid #56B4E9; }
+#quarto-content main > table:first-of-type tbody tr:nth-child(3) { background: #e6f6f2; border-left: 4px solid #009E73; }
+#quarto-content main > table:first-of-type tbody tr:nth-child(4) { background: #e6f0fb; border-left: 4px solid #0072B2; }
+#quarto-content main > table:first-of-type tbody tr:nth-child(5) { background: #fdeee9; border-left: 4px solid #D55E00; }
+#quarto-content main > table:first-of-type tbody tr:nth-child(6) { background: #f8eef5; border-left: 4px solid #CC79A7; }
+#quarto-content main > table:first-of-type tbody tr:nth-child(7) { background: #fffde6; border-left: 4px solid #F0E442; }
+#quarto-content main > table:first-of-type tbody tr:nth-child(8) { background: #f0f0f0; border-left: 4px solid #555; }
+
+#quarto-content main > table:first-of-type tbody td {
+  padding: 0.65rem 1.1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  vertical-align: middle;
+  font-weight: 500;
+}
+#quarto-content main > table:first-of-type tbody tr:hover {
+  filter: brightness(0.96);
+  transition: filter 0.15s;
+}
+
+/* ── All other tables ── */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin: 1.2rem 0;
+}
+thead tr { background: linear-gradient(90deg, #0b2d5e 0%, #0072B2 100%); color: #fff; }
+thead th { padding: 0.7rem 1rem; font-weight: 600; font-size: 0.81rem; text-transform: uppercase; letter-spacing: 0.4px; border: none; }
+tbody tr { transition: background 0.14s; }
+tbody tr:nth-child(even) { background: #f5f7fa; }
+tbody tr:hover { background: #d6eaf8 !important; }
+tbody td { padding: 0.58rem 1rem; border-bottom: 1px solid #dde4ed; vertical-align: middle; }
+
+/* ── Code ── */
+pre, code { font-family: "Fira Code", "JetBrains Mono", "Courier New", monospace; font-size: 0.84rem; }
+pre.sourceCode {
+  background: #0d1b2a !important;
+  color: #e8edf2 !important;
+  border-radius: 6px;
+  border-left: 4px solid #009E73;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.18);
+  padding: 1.1rem 1.3rem;
+  overflow-x: auto;
+}
+code.sourceCode span.co { color: #6dbf67; }
+code.sourceCode span.kw { color: #6eb4f7; }
+code.sourceCode span.st { color: #f0a070; }
+code.sourceCode span.dv { color: #b5cea8; }
+code.sourceCode span.fu { color: #f0d080; }
+code:not([class]) { background: #d6eaf8; color: #0b2d5e; padding: 0.15em 0.42em; border-radius: 4px; font-size: 0.875em; }
+
+details > summary {
+  background: #d6eaf8;
+  color: #0b2d5e;
+  border: 1px solid #b8d4eb;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.28rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+details > summary:hover { background: #0072B2; color: #fff; }
+
+/* ── Callouts ── */
+.callout { border-radius: 8px; border: none !important; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin: 1.4rem 0; overflow: hidden; }
+.callout-header { font-weight: 700 !important; font-size: 0.87rem; padding: 0.62rem 1.05rem !important; }
+.callout-body { padding: 0.82rem 1.15rem !important; font-size: 0.9rem; }
+.callout-note      { border-left: 5px solid #009E73 !important; background: #e6f6f2; }
+.callout-note .callout-header      { background: rgba(0,158,115,0.13); color: #007055; }
+.callout-tip       { border-left: 5px solid #0072B2 !important; background: #e6f0fb; }
+.callout-tip .callout-header       { background: rgba(0,114,178,0.12); color: #0b2d5e; }
+.callout-warning   { border-left: 5px solid #E69F00 !important; background: #fff8e6; }
+.callout-warning .callout-header   { background: rgba(230,159,0,0.13); color: #8a5e00; }
+.callout-important { border-left: 5px solid #D55E00 !important; background: #fdeee9; }
+.callout-important .callout-header { background: rgba(213,94,0,0.10); color: #a03800; }
+
+/* ── Math ── */
+.math.display {
+  background: #f5f7fa;
+  border: 1px solid #d0dbe8;
+  border-left: 4px solid #CC79A7;
+  border-radius: 6px;
+  padding: 0.9rem 1.4rem;
+  overflow-x: auto;
+  margin: 1.1rem 0;
+}
+
+/* ── Figures ── */
+img { border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 100%; }
+figcaption, .figure .caption { font-size: 0.82rem; color: #5d6d7e; font-style: italic; margin-top: 0.4rem; text-align: center; }
+
+/* ── Links ── */
+a { color: #0072B2; text-decoration: none; transition: color 0.18s; }
+a:hover { color: #009E73; text-decoration: underline; }
+
+/* ── Blockquote ── */
+blockquote {
+  border-left: 4px solid #009E73;
+  background: #e6f6f2;
+  border-radius: 0 6px 6px 0;
+  padding: 0.75rem 1.1rem;
+  font-style: italic;
+  margin: 1rem 0;
+  color: #1a1c2e;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f5f7fa; }
+::-webkit-scrollbar-thumb { background: #0072B2; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #0b2d5e; }
+
+/* ── Print ── */
+@media print {
+  #title-block-header { background: #0b2d5e !important; -webkit-print-color-adjust: exact; }
+  pre.sourceCode { background: #f5f5f5 !important; color: #000 !important; }
+}
